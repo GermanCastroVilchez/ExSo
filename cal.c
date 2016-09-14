@@ -30,7 +30,7 @@ scanf("%d",&a[c]);
 *operacion=*operacion+a[c];
 }
 
-printf("la suma es de: %d:  \n ",*operacion);
+printf("El resultado es: %d:  \n ",*operacion);
 }
 else if(operaciones==2){
 printf("===========RESTA===========");
@@ -44,10 +44,10 @@ for (int c=1;c<=b;c++){
 printf("ingrese el numero %d :  \n   ", c );
 scanf("%d",&a[c]);
 
-*operacion=(*operacion)-a[c];
+*operacion=-*operacion-a[c];
 }
 
-printf("la suma es de: %d:  \n ",*operacion);
+printf("El resultado es: %d:  \n ",*operacion);
 
 }
  else if (operaciones==3)
@@ -66,7 +66,7 @@ scanf("%d",&a[c]);
 *operacion=*operacion*a[c];
 }
 
-printf("la suma es de: %d:  \n ",*operacion);
+printf("El resultado es: %d:  \n ",*operacion);
  }
  else if (operaciones==4)
  {
@@ -80,12 +80,17 @@ for (int c=0;c<b;c++){
 
 printf("ingrese el numero %d :  \n   ", c );
 scanf("%d",&a[c]);
-*operacion=a[c]/(*operacion);
-*operacion=a[c];	
-printf("%d",*operacion);
+if (c==0){
+
+*operacion=a[c];
+}
+else if(c>=1){
+*operacion=*operacion/a[c];
+
+}
 }
 
-printf("la suma es de: %d:  \n ",*operacion);
+printf("El Resultado es: %d:  \n ",*operacion);
  }
  else{
  	printf("=========Opcion no encontrada========\n");
